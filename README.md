@@ -13,11 +13,20 @@
 │   ├── Dockerfile
 │   ├── package.json
 │   └── tsconfig.json
-│
-├── frontend
-│   ├── src
-│   │   ├── app
-│   │   │   ├── components    # Componentes Angular
+
+---------------------------------------
+ app/
+    ├── gatosrazas/
+    │   └── gatosrazas.component.ts
+    ├── gatosbuscar/
+    │   └── gatosbuscar.component.ts
+    ├── usuario-login/
+    │   └── usuario-login.component.ts
+    ├── usuario-register/
+    │   └── usuario-register.component.ts
+    └── usuario-detalles/
+        └── usuario-detalles.component.ts
+------------------------------------------------
 │   │   │   ├── services      # Servicios Angular (HTTP, lógica frontend)
 │   │   │   ├── models        # Interfaces y modelos de datos
 │   │   │   ├── modules       # Módulos Angular
