@@ -1,0 +1,7 @@
+{
+"/partido/":{
+        "target":"http://172.20.10.3:4200",
+        "secure": false,
+        "cahneOrigin":true
+  }
+}

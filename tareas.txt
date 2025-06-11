@@ -1,0 +1,8 @@
+Agregar rutas para gatos e imágenes
+
+Conectar con MongoDB
+
+Crear pruebas unitarias
+
+O incluso armar la parte del frontend Angular para que consumas esta API
+
