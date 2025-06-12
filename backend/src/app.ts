@@ -34,7 +34,8 @@
     app.use('/gatos', gatosRoutes);
     app.use('/imagenes', imagenesRoutes);
     app.use('/admin', adminRoutes);
-
+    app.use('/usuarios', usuariosRoutes);
+    
     app.get('/', (_req, res) => {
     res.send('Hola Mundo desde Express + TypeScript!');
     });
