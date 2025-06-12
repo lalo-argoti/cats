@@ -1,0 +1,42 @@
+<div class="contenedor-raza">
+<div class="contenedor-carrusel" *ngIf="imagenes.length > 0">
+  <h2>Galería de Razas</h2>
+  <div class="carrusel">
+    <button (click)="anterior()">‹</button>
+
+    <img
+      [src]="imagenes[indiceActual]"
+      alt="Imagen de raza"
+      (error)="guacalError($event)"
+    />
+
+    <button (click)="siguiente()">›</button>
+      <p>Imagen {{ indiceActual + 1 }} de {{ imagenes.length }}</p>
+
+  </div>
+
+ 
+</div>
+
+
+<select [(ngModel)]="razaSeleccionadaId" (change)="onSelectRaza($event)">
+  <option value="">-- Selecciona una raza --</option>
+  <option *ngFor="let raza of razas" [value]="raza.id">
+    {{ raza.name }}
+  </option>
+</select>
+
+  <div class="bandera" *ngIf="bandera">
+    {{ bandera }}
+  </div>
+
+<div *ngIf="razaSeleccionada">
+  <h3>{{ razaSeleccionada.breed.name }}</h3>
+  <img [src]="razaSeleccionada.image || 'https://via.placeholder.com/300x200?text=Sin+foto'" (error)="guacalError($event)" alt="{{ razaSeleccionada.breed.name }}" />
+  <p><strong>Origen:</strong> {{ razaSeleccionada.breed.origin }}</p>
+  <p><strong>Descripción:</strong> {{ razaSeleccionada.breed.description }}</p>
+
+  <!-- JSON completo para debug -->
+  <pre>{{ razaSeleccionada | json }}</pre>
+</div>
+</div>

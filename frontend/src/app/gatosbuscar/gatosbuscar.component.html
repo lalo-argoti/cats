@@ -1,0 +1,21 @@
+<div class="contenedor-busqueda">
+  <h2>Buscar Razas de Gatos</h2>
+  <input type="text" [(ngModel)]="filtro" (input)="buscar()" placeholder="Ej: Siamese, Maine Coon..." />
+  <div *ngIf="cargando">Cargando razas...</div>
+
+<ul *ngIf="!cargando && resultado.length > 0">
+  <li *ngFor="let raza of resultado" (click)="irADetalle(raza.id)" style="cursor:pointer;">
+    <img
+      [src]="raza.image?.url || 'https://via.placeholder.com/100x80?text=Sin+foto'"
+      (error)="guacalError($event)"
+      alt="{{ raza.name }}"
+      width="100"
+    />
+    {{ raza.name }}
+  </li>
+</ul>
+
+  <div *ngIf="!cargando && resultado.length === 0">
+    No se encontraron razas con ese nombre.
+  </div>
+</div>

@@ -7,11 +7,14 @@ import { UsuarioRegisterComponent } from './usuario-register/usuario-register.co
 import { UsuarioDetallesComponent } from './usuario-detalles/usuario-detalles.component';
 
 export const routes: Routes = [
+ {
+  path: 'gatos-razas/:id', component: GatosrazasComponent},
   { path: 'gatos-razas', component: GatosrazasComponent },
   { path: 'gatos-buscar', component: GatosbuscarComponent },
   { path: 'usuario-login', component: UsuarioLoginComponent },
   { path: 'usuario-registro', component: UsuarioRegisterComponent },
   { path: 'usuario-detalles', component: UsuarioDetallesComponent },
   
-  { path: '', redirectTo: '/usuario-login', pathMatch: 'full' },
+  
+  { path: '', redirectTo: '/gatos-razas', pathMatch: 'full' },
 ];

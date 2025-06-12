@@ -1,0 +1,114 @@
+.contenedor-raza {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.contenedor-raza h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.contenedor-raza select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+
+.contenedor-raza select:hover,
+.contenedor-raza select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.bandera {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contenedor-raza div[ng-reflect-ng-if] > h3 {
+  margin-top: 0;
+  color: #2980b9;
+}
+
+.contenedor-raza img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contenedor-raza p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0.25rem 0 1rem;
+}
+
+.contenedor-raza pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  max-height: 300px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-family: monospace;
+  user-select: text;
+}
+
+
+.contenedor-carrusel {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrusel img {
+  max-width: 300px;
+  max-height: 200px;
+  margin: 0 10px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.carrusel button {
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 10px;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.carrusel button:hover {
+  color: #000;
+}
