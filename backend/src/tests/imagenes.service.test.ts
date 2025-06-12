@@ -6,7 +6,7 @@ describe('ImagenesService', () => {
 
   it('getImagenes debería devolver arreglo con imágenes', async () => {
     const result = await service.getImagenes();
-    expect(result).to.be.an('array');
+    expect(Array.isArray(result)).toBe(true);
     expect(result[0]).to.have.property('url');
   });
 });

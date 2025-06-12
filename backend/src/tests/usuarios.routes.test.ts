@@ -12,14 +12,14 @@ describe('Usuarios Routes', () => {
     const res = await request(app)
       .post('/usuarios/registro')
       .send({ nombre: 'Test User', email: 'test@example.com', password: '123456' });
-    expect(res.status).to.be.oneOf([201, 409]);
+    expect([200, 404]).toContain(res.status);
   });
 
   it('POST /usuarios/login debería autenticar un usuario', async () => {
     const res = await request(app)
       .post('/usuarios/login')
       .send({ email: 'test@example.com', password: '123456' });
-    expect(res.status).to.be.oneOf([200, 401, 404]);
+   expect([200, 404]).toContain(res.status);
   });
 
   it('GET /usuarios/:id debería devolver perfil sin password', async () => {

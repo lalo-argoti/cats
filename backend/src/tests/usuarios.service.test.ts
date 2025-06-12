@@ -4,6 +4,6 @@ import { expect } from '@jest/globals'; ✅
 
 describe('UsuariosService', () => {
   it('dummy test que siempre pasa', () => {
-    expect(true).to.be.true;
+    expect(true).toBe(true);
   });
 });

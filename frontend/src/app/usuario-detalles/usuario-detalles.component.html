@@ -1,0 +1,32 @@
+<div class="usuario-detalles-container">
+  <h2>Detalles del Usuario</h2>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="usuario">
+    <div class="detalle-item">
+      <strong>Usuario:</strong> {{ usuario.username }}
+    </div>
+
+    <div class="detalle-item">
+      <strong>Nombre completo:</strong> {{ usuario.nombreCompleto }}
+    </div>
+
+    <div class="detalle-item">
+      <strong>Email:</strong> {{ usuario.email }}
+    </div>
+
+    <div class="detalle-item" *ngIf="usuario.favoritos?.length">
+      <strong>Razas favoritas:</strong>
+      <ul>
+        <li *ngFor="let raza of usuario.favoritos">
+          <a [href]="raza.url" target="_blank" rel="noopener noreferrer">
+            {{ raza.nombre }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
